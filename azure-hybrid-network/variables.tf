@@ -67,31 +67,65 @@ variable "subnet_research" {
   type        = map(string)
 }
 
-variable "dns_name" {
-  type = string
-}
-
-# VM
+# Virtual Machine Variables
 variable "vm_name1" {
-  type = string
+  type        = string
+  description = "Name of the first virtual machine."
 }
 
 variable "nic_name1" {
-  type = string
+  type        = string
+  description = "Name of the network interface card (NIC) associated with the first virtual machine."
+}
+
+variable "vm_size1" {
+  type        = string
+  description = "Size of the virtual machines (e.g., Standard_DS1_v2)."
+}
+
+variable "admin_username1" {
+  type        = string
+  description = "Admin username for accessing the virtual machines."
 }
 
 variable "vm_name2" {
-  type = string
+  type        = string
+  description = "Name of the second virtual machine."
 }
 
 variable "nic_name2" {
-  type = string
+  type        = string
+  description = "Name of the network interface card (NIC) associated with the second virtual machine."
 }
 
-variable "vm_size" {
-  type = string
+variable "vm_size2" {
+  type        = string
+  description = "Size of the virtual machines (e.g., Standard_DS1_v2)."
 }
 
-variable "admin_username" {
-  type = string
+variable "admin_username2" {
+  type        = string
+  description = "Admin username for accessing the virtual machines."
+}
+
+# Virtual Network Gateway
+variable "vpn_gateway_name" {
+  type        = string
+  description = "Name of the VPN gateway"
+}
+
+variable "gateway_sku" {
+  type        = string
+  description = "Gateway SKU"
+}
+
+
+variable "manufacturing_gateway_name" {
+  type        = string
+  description = "Name of the VPN gateway"
+}
+
+variable "manufacturing_gateway_sku" {
+  type        = string
+  description = "Gateway SKU"
 }
