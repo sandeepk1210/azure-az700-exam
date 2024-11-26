@@ -76,20 +76,3 @@ resource "azurerm_windows_virtual_machine" "vm1" {
     version   = "latest"
   }
 }
-
-# Bastion Host
-# resource "azurerm_bastion_host" "bastion_core_service" {
-#   name                = "core-service-bastion"
-#   location            = var.location_core_service
-#   resource_group_name = azurerm_resource_group.rg.name
-#   sku                 = "Developer"
-#   virtual_network_id  = azurerm_virtual_network.vnet_core_service.id
-
-#   ip_configuration {
-#     name                 = "ipconfig_bastion1"
-#     subnet_id            = azurerm_subnet.subet_core_service["AzureBastionSubnet"].id
-#     public_ip_address_id = azurerm_public_ip.core-pip1.id
-#   }
-
-#   tags = local.common_tags
-# }
